@@ -1,12 +1,13 @@
 package com.testproject.service;
 
-import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import com.testproject.model.FileInfo;
-import com.testproject.service.DirectoryService;
-import com.testproject.service.DirectoryWalker;
 
 /**
  * The class <code>DirectoryServiceTest</code> contains tests for the class <code>{@link DirectoryService}</code>.
