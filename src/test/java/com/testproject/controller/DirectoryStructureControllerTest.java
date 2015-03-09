@@ -84,7 +84,7 @@ a	 *
 		throws Exception {
 		DirectoryStructureController fixture = new DirectoryStructureController();
 		fixture.list = new DirectoryService();
-		String path = "";
+		String path = "D:\\shri1234";
 		ExtendedModelMap model = new ExtendedModelMap();
 
 		ModelAndView result = fixture.showInfo(path, model);
