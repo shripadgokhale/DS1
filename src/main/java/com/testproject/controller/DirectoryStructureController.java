@@ -1,5 +1,6 @@
 package com.testproject.controller;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +31,14 @@ private static final Logger logger = LoggerFactory.getLogger(DirectoryStructureC
  * Displays file information if input parameter is file. 
  * Displays directory and all its children (recursive) information if input paratmeter is directory.
  * Displays error if input parameter path is invalid.
- * @param name : File or directory path
+ * 
+ * @param path : File or directory path
  * @param com.testproject.model : 
- * @return
+ * @return FileInfo if input path is of file.
+ * 		   DirInfo if input path is of directory.
  */
 @RequestMapping(value = {"/fileinfo"}, method=RequestMethod.POST)
- public  ModelAndView showInfo(@RequestParam(value="name", required=true) String path, Model model) {
+ public  ModelAndView showInfo(  String path, Model model) {
 	FileInfo fileInfo = list.getStructureInfo(path);
 	if(fileInfo == null){
 		model.addAttribute("message", "Invalid path");
@@ -51,9 +54,11 @@ private static final Logger logger = LoggerFactory.getLogger(DirectoryStructureC
  * Displays file information in json format if input parameter is file. 
  * Displays directory and all its children (recursive) information  in json format if input paratmeter is directory.
  * Displays error if input parameter path is invalid.
+ * Type following url in browser to retrieve json information. http://hostname:portname/fileinfo?name={path}
  * @param name
  * @param com.testproject.model
- * @return
+ * @return FileInfo if input path is of file.
+ * 		   DirInfo if input path is of directory.
  */
 @RequestMapping(value = {"/fileinfo"}, method=RequestMethod.GET)
 public @ResponseBody FileInfo showJsonInfo(@RequestParam(value="name", required=true) String path, Model model) {

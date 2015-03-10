@@ -10,7 +10,7 @@
    <table>
     <tr>
         <td><label >Name</label></td>
-        <td><input type='text' name='name' value=''></td>
+        <td><input type='text' name='path' value=''></td>
     </tr>
     
     <tr>

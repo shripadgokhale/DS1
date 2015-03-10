@@ -20,6 +20,10 @@ public class DirectoryService {
 	@Autowired
 	DirectoryWalker walker;	
 
+	public void setWalker(DirectoryWalker walker) {
+		this.walker = walker;
+	}
+
 	/**
 	 * Returns information of single file if path is file.
 	 * Initiates directory iteration if path is directory and returns full rcursive directory information..

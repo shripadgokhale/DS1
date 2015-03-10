@@ -12,7 +12,6 @@ import com.testproject.model.FileInfo;
 /**
  * The class <code>DirectoryServiceTest</code> contains tests for the class <code>{@link DirectoryService}</code>.
  *
- * @generatedBy CodePro at 3/4/15 2:20 PM
  * @author sgokhale
  * @version $Revision: 1.0 $
  */
@@ -20,14 +19,12 @@ public class DirectoryServiceTest {
 	/**
 	 * Run the DirectoryService() constructor test.
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	@Test
 	public void testDirectoryService_1()
 		throws Exception {
 		DirectoryService result = new DirectoryService();
 		assertNotNull(result);
-		// add additional test code here
 	}
 
 	/**
@@ -35,7 +32,6 @@ public class DirectoryServiceTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	@Test
 	public void testGetStructureInfo_1()
@@ -46,7 +42,6 @@ public class DirectoryServiceTest {
 
 		FileInfo result = fixture.getStructureInfo(path);
 
-		// add additional test code here
 		assertEquals(null, result);
 	}
 
@@ -55,60 +50,20 @@ public class DirectoryServiceTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	@Test
 	public void testGetStructureInfo_2()
 		throws Exception {
 		DirectoryService fixture = new DirectoryService();
 		fixture.walker = new DirectoryWalker();
-		String path = "";
+		String path = "d://";
 
 		FileInfo result = fixture.getStructureInfo(path);
 
 		// add additional test code here
-		assertEquals(null, result);
+		assertNotNull( result);
 	}
 
-	/**
-	 * Run the FileInfo getStructureInfo(String) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
-	 */
-	@Test
-	public void testGetStructureInfo_3()
-		throws Exception {
-		DirectoryService fixture = new DirectoryService();
-		fixture.walker = new DirectoryWalker();
-		String path = "";
-
-		FileInfo result = fixture.getStructureInfo(path);
-
-		// add additional test code here
-		assertEquals(null, result);
-	}
-
-	/**
-	 * Run the FileInfo getStructureInfo(String) method test.
-	 *
-	 * @throws Exception
-	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
-	 */
-	@Test
-	public void testGetStructureInfo_4()
-		throws Exception {
-		DirectoryService fixture = new DirectoryService();
-		fixture.walker = new DirectoryWalker();
-		String path = "";
-
-		FileInfo result = fixture.getStructureInfo(path);
-
-		// add additional test code here
-		assertEquals(null, result);
-	}
 
 	/**
 	 * Perform pre-test initialization.
@@ -116,7 +71,6 @@ public class DirectoryServiceTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	@Before
 	public void setUp()
@@ -130,7 +84,6 @@ public class DirectoryServiceTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	@After
 	public void tearDown()
@@ -143,7 +96,6 @@ public class DirectoryServiceTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 3/4/15 2:20 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(DirectoryServiceTest.class);
