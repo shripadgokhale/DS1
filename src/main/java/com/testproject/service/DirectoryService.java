@@ -34,7 +34,7 @@ public class DirectoryService {
 	public FileInfo getStructureInfo( String path) {
 		File file = new File(path);
 		if(!file.exists() ){
-		    logger.error("The file does not exist or invalid path : " +path);
+		    logger.debug("The file does not exist or invalid path : " +path);
 
 			return null;
 		}

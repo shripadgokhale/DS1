@@ -42,7 +42,7 @@ private static final Logger logger = LoggerFactory.getLogger(DirectoryStructureC
 	FileInfo fileInfo = list.getStructureInfo(path);
 	if(fileInfo == null){
 		model.addAttribute("message", "Invalid path");
-		logger.error("Invalid path entered : " + path);
+		logger.debug("Invalid path entered : " + path);
 		return new  ModelAndView("fail");
 	}
 	model.addAttribute("list", fileInfo);
